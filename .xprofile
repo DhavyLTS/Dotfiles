@@ -1,0 +1,5 @@
+export VK_DRIVER_FILES=/usr/share/vulkan/icd.d/radeon_icd.i686.json:/usr/share/vulkan/icd.d/radeon_icd.x86_64.json
+export PATH="$HOME/.cargo/bin:$PATH"
+export GTK_THEME=adw-gtk3-dark
+
+xrandr --output HDMI-A-0 --mode "1920x1080"
