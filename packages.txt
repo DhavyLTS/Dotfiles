@@ -2,7 +2,7 @@ vesktop google-chrome apple_cursor stow neovim nano haproxy xorg-xrandr
 xf86-video-amdgpu adw-gtk3 xclip maim xdotool hwinfo mingw-w64 unrar unzip
 7zip lazygit corectrl feh yazi cmake ttf-cascadia-code-nerd zsh starship
 picom polybar lib32-vulkan-radeon vulkan-radeon lib32-mesa mesa linux-lts-headers
-ttf-ms-win11-auto
+ttf-ms-win11-auto rp-pppoe pppoe v4l2loopback-dkms
 adobe-source-han-sans-cn-fonts adobe-source-han-sans-jp-fonts
 adobe-source-han-sans-kr-fonts adobe-source-han-sans-otc-fonts
 adobe-source-han-sans-tw-fontsa dobe-source-han-serif-cn-fonts
