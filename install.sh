@@ -1,8 +1,8 @@
 #!/bin/bash
-if !command -v yay &> /dev/null; then
+if ! command -v yay &> /dev/null; then
 	git clone https://aur.archlinux.org/yay-git /tmp/yay-git
 	cd /tmp/yay-git && makepkg -si --noconfirm
-	yay -S --noconfirm $(<packages.txt)
+	yay -S --noconfirm $(<$HOME/.dotfiles/packages.txt)
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
@@ -11,8 +11,8 @@ if ! [[ -d $HOME/.oh-my-zsh ]]; then
 	sudo chsh -s $(which zsh) $(whoami)
 fi
 
-if !command -v cargo &> /dev/null; then
-	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -- -y && source $HOME/.cargo/env
+if ! command -v cargo &> /dev/null; then
+	curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh && source $HOME/.cargo/env
 	cargo install xremap --features x11
 	cargo install bat bacon
 fi
