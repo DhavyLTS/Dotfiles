@@ -9,18 +9,8 @@ exec --no-startup-id sudo ~/.scripts/corectrl.sh
 exec --no-startup-id sudo xremap ~/.config/xremap.yaml --watch
 
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-
-# Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
 
 bindsym Print exec maim -s | xclip -selection clipboard -t image/png
@@ -40,11 +30,9 @@ bindsym $mod+Shift+a move left
 bindsym $mod+Shift+s move down
 bindsym $mod+Shift+w move up
 
-# split in horizontal orientation
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
+bindsym $mod+f fullscreen toggle
 
 # switch to workspace
 bindsym $mod+1 workspace number 1
@@ -71,7 +59,6 @@ bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 bindsym $mod+Shift+apostrophe move container to workspace number 0
-
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
